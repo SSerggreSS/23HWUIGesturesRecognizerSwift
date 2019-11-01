@@ -37,6 +37,7 @@ class ViewController: UIViewController , CAAnimationDelegate, UIGestureRecognize
     
     let drum = UIImageView(image: UIImage(named: "drum.png"))
     let leading = UIImageView(image: UIImage(named: "leading.png"))
+    let vid = UIImageView(image: UIImage(named: "vid.png"))
     
     var testViewScale: CGFloat = 0.0
     var testViewRotation: CGFloat = 0.0
@@ -54,7 +55,9 @@ class ViewController: UIViewController , CAAnimationDelegate, UIGestureRecognize
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //self.view.backgroundColor = UIColor(cgColor: CGColor.init(srgbRed: 153.0, green: 255.0, blue: 153.0, alpha: 1.0))
+        self.vid.frame = CGRect(origin: self.view.frame.origin, size: self.view.frame.size)
+        self.view.addSubview(self.vid)
+        
         let color = UIColor.rgb(red: 173, green: 255, blue: 47)
         self.view.backgroundColor = color
         //1 task
